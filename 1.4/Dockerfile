@@ -1,6 +1,6 @@
 FROM debian:stretch
 
-MAINTAINER Stephan Peijnik <speijnik@anexia-it.com
+MAINTAINER Stephan Peijnik <speijnik@anexia-it.com>
 
 ARG dumb_init_version=1.2.0
 ARG dumb_init_base_url=https://github.com/Yelp/dumb-init/releases/download/v${dumb_init_version}
