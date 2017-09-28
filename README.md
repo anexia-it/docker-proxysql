@@ -2,7 +2,7 @@
 
 ## About this image
 
-This docker image is based on *debian:stretch* and contains both [proxy-sql](https://github.com/sysown) and [dumb-init](https://github.com/Yelp/dumb-init).
+This docker image is based on *debian:stretch* and contains both [proxysql](https://github.com/sysown/proxysql) and [dumb-init](https://github.com/Yelp/dumb-init).
 
 ## Supported tags and respective `Dockerfile` links
 
