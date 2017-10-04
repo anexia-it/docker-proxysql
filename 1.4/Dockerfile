@@ -11,7 +11,7 @@ ARG proxysql_base_url=https://github.com/sysown/proxysql/releases/download/v${pr
 ARG proxysql_package_name=proxysql_${proxysql_version}-debian9_amd64.deb
 
 # Install wget so we can fetch the dumb-init and ProxySQL packages
-RUN apt-get update && apt-get install -y wget
+RUN apt-get update && apt-get install --no-install-recommends -y wget ca-certificates && rm -rf /var/lib/apt/lists/* && apt-get clean
 
 # Fetch the dumb-init package and install it
 RUN wget ${dumb_init_base_url}/${dumb_init_package_name} \
@@ -24,8 +24,6 @@ RUN wget ${proxysql_base_url}/${proxysql_package_name} \
     	 -O /tmp/${proxysql_package_name} && \
     dpkg -i /tmp/${proxysql_package_name} && \
     rm -f /tmp/${proxysql_package_name}
-# Cleanup
-RUN rm -rf /var/lib/apt/lists/*
 
 VOLUME /var/lib/proxysql
 
