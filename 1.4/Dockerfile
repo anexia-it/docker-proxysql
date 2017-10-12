@@ -1,4 +1,4 @@
-FROM debian:stretch
+FROM debian:stretch-slim
 
 MAINTAINER Stephan Peijnik <speijnik@anexia-it.com>
 
